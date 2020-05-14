@@ -4,7 +4,7 @@ import Typography from "@material-ui/core/Typography";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
 import Button from "@material-ui/core/Button";
-import { Route, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -16,6 +16,10 @@ const useStyles = makeStyles((theme: Theme) =>
     },
     title: {
       flexGrow: 1,
+    },
+    link: {
+      textDecoration: "none",
+      color: "white",
     },
   })
 );
@@ -31,11 +35,15 @@ const Header: React.FC = (props) => {
             Teshima's portfolio
           </Typography>
 
-          <Link to="/aboutme">
+          <Link to="/aboutme" className={classes.link}>
             <Button color="inherit">about me</Button>
           </Link>
-          <Button color="inherit">skills</Button>
-          <Button color="inherit">work</Button>
+          <Link to="/skills" className={classes.link}>
+            <Button color="inherit">skills</Button>
+          </Link>
+          <Link to="/work" className={classes.link}>
+            <Button color="inherit">work</Button>
+          </Link>
         </Toolbar>
       </AppBar>
     </div>

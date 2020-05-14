@@ -4,6 +4,7 @@ import Container from "@material-ui/core/Container";
 import Box from "@material-ui/core/Box";
 import { Route } from "react-router-dom";
 import AboutMe from "./AboutMe";
+import Skills from "./Skills";
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -20,6 +21,7 @@ const Main: React.FC = () => {
         this is main contents teshima's portfolio 現在、作成中です。
       </Box>
       <Route path="/aboutme" component={AboutMe}></Route>
+      <Route path="/skills" component={Skills}></Route>
     </Container>
   );
 };
