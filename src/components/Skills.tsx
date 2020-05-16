@@ -35,6 +35,19 @@ const StyledTableRow = withStyles((theme: Theme) =>
   })
 )(TableRow);
 
+// 言語(string)、年数(int)、レベル(string)
+const langs = [
+  ["php", 3, "aaa"],
+  ["javascipt", 3, "aaa"],
+  ["ruby", 3, "aaa"],
+  ["python", 3, "aaa"],
+  [
+    "VBA",
+    2,
+    "業務用ツールとして、webスクレイピングツールを作成し、WEBテスト自動化等、担当内の工数削減を実現",
+  ],
+];
+
 const rows = [
   ["Frozen yoghurt", 159, 6.0, 24, 4.0],
   ["Ice cream sandwich", 237, 9.0, 37, 4.3],
