@@ -36,11 +36,24 @@ const StyledTableRow = withStyles((theme: Theme) =>
 )(TableRow);
 
 const rows = [
-  ["Frozen yoghurt", 159, 6.0, 24, 4.0],
-  ["Ice cream sandwich", 237, 9.0, 37, 4.3],
-  ["Eclair", 262, 16.0, 24, 6.0],
-  ["Cupcake", 305, 3.7, 67, 4.3],
-  ["Gingerbread", 356, 16.0, 49, 3.9],
+  ["PHP", 5, 
+  `フレームワーク（FuelPHP,CodeIgniter）を使用し、
+  キュレーションサービスのバックエンドを作成可能。また、
+  PurePHPを用いてフルスクラッチでSNSを作成した経験あり`
+　],
+  ["Ruby", 3, 
+  `フレームワーク（Ruby on Rails）を使用しキュレーションサービスのバックエンドを作成可能。
+  また、Webスクレイピングによる情報収集等も可能`
+  ],
+  ["JavaScript", 1, 
+  `React, jQueryを用いた簡易なWebサイト構築可能。
+  また、Ruby on Railsをバックエンドとして開発も経験
+  `],
+  ["VBA", 3,
+  `Seleniumが使用不可能な環境で、社内のWebテスト自動化ツールを作成
+  社内の誰もが使用可能となるよう、Excelでミニ言語を作成し、簡易にシナリオ作成を可能とした。
+  また、社内向けの定常作業の自動化も多く実装し、全体の工数削減に貢献`
+  ],
 ];
 const useStyles = makeStyles({
   table: {
@@ -59,23 +72,17 @@ const Skills: React.FC = () => {
         <Table className={classes.table} aria-label="customized table">
           <TableHead>
             <TableRow>
-              <StyledTableCell>Dessert (100g serving)</StyledTableCell>
               <StyledTableCell align="right">言語</StyledTableCell>
-              <StyledTableCell align="right">フレームワーク</StyledTableCell>
-              <StyledTableCell align="right">OS</StyledTableCell>
-              <StyledTableCell align="right">ツール</StyledTableCell>
+              <StyledTableCell align="right">経験年数</StyledTableCell>
+              <StyledTableCell align="right">レベル</StyledTableCell>
             </TableRow>
           </TableHead>
           <TableBody>
             {rows.map((row) => (
               <StyledTableRow key={row[0]}>
-                <StyledTableCell component="th" scope="row">
-                  {row[0]}
-                </StyledTableCell>
                 <StyledTableCell align="right">{row[0]}</StyledTableCell>
                 <StyledTableCell align="right">{row[1]}</StyledTableCell>
                 <StyledTableCell align="right">{row[2]}</StyledTableCell>
-                <StyledTableCell align="right">{row[3]}</StyledTableCell>
               </StyledTableRow>
             ))}
           </TableBody>
